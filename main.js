@@ -1,14 +1,10 @@
-// Pedir un numero al usuario y ver 
-// la tabla de multiplicar
-// anteriores al numero digitado
-// Ejemplo  Usuario = 3
-// Tabla 1, Tabla 2, Tabla 3
+//Una farmacia aplica al precio de los remedios el 10% de descuento,
+//hacer un programa que ingresando el costo de los medicamentos calcules el descuento y el precio final.
 
-let num = Number(prompt("Digite un numero para hacer las tablas"));
+let costo = Number(prompt("Digite el costo del Medicamento"));
+let gcia = Number(prompt("Cual es el porcentaje de Ganancia")) / 100;
+let vta = Math.round(costo * (1 + gcia));
+let descuento = vta * 0.1;
 
-for (var i=1; i<= num; i++) {
-    console.log(`Tabla del ${i}`);
-    for (var j=1; j<=10; j++) {
-        console.log(`${i} X ${j} = ${i*j}`);
-    }
-}
+
+alert(`El costo del Medicamento es de ${costo}, su descuento es ${descuento} y el precio de venta es de ${vta}`);
